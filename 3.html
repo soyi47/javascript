@@ -3,17 +3,15 @@
 <head>
   <title>WEB1 - JavaScript</title>
   <meta charset="utf-8">
-</head>
-<body>
-  <h1><a href="index.html">WEB</a></h1>
-  <input id="night_day" type="button" value="night" onclick="
+  <script>
+  function nightDayHandler(self) {
     var target = document.querySelector('body');
     var links = document.querySelectorAll('a');
     var i = 0;
-    if ( this.value === 'night' ) {
+    if ( self.value === 'night' ) {
       target.style.backgroundColor ='black';
       target.style.color ='white';
-      this.value = 'day'
+      self.value = 'day'
       while ( i < links.length ) {
         links[i].style.color = 'powderblue';
         i = i + 1;
@@ -21,12 +19,19 @@
     } else {
       target.style.backgroundColor ='white';
       target.style.color ='black';
-      this.value = 'night'
+      self.value = 'night'
       while ( i < links.length ) {
         links[i].style.color = 'blue';
         i = i + 1;
       }
     }
+  }
+  </script>
+</head>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
   ">
 
   <ol>
@@ -38,30 +43,6 @@
   <p>
     JavaScript (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
   </p>
-
-  <input id="night_day" type="button" value="night" onclick="
-    if ( this.value === 'night' ) {
-      target.style.backgroundColor ='black';
-      target.style.color ='white';
-      this.value = 'day'
-    } else {
-      target.style.backgroundColor ='white';
-      target.style.color ='black';
-      this.value = 'night'
-    }
-  ">
-
-  <input id="night_day" type="button" value="night" onclick="
-    if ( this.value === 'night' ) {
-      target.style.backgroundColor ='black';
-      target.style.color ='white';
-      this.value = 'day'
-    } else {
-      target.style.backgroundColor ='white';
-      target.style.color ='black';
-      this.value = 'night'
-    }
-  ">
 
 </body>
 </html>
