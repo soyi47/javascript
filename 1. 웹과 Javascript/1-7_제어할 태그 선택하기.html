@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>제어할 태그 선택하기</title>
+</head>
+
+<body>
+    <h1>WEB</h1>
+    <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        /* 
+            Document.querySelector()
+            * 제공한 선택자와 일치하는 문서 내 첫 번째 Element를 반환함.
+            * 괄호 내에는 CSS 선택자를 사용함.
+                - 'abc'라는 class 값을 가지는 태그를 선택하고 싶다면?
+                    document.querySelector('.abc')
+                - 'def'라는 id 값을 가지는 태그를 선택하고 싶다면?
+                    document.querySelector('#def')
+        */
+    " onmouseover="
+        document.querySelector('body').style.backgroundColor='grey';
+    ">
+    <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+    ">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis magnam cupiditate quidem cumque natus deserunt
+        quae quisquam aliquid laudantium rem, tenetur vel molestiae possimus assumenda repellat eos similique ea esse.
+    </p>
+</body>
+
+</html>
