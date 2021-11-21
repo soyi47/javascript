@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>함수 활용</title>
+    <script>
+        /* 
+            input 태그 외부에 함수를 정의하면서, this는 더이상 input 태그 자신을 가리키지 않게 된다.
+            => 함수를 호출할 때 인자로 this를 주고, 함수에서는 이 인자를 받는 매개변수 self를 정의하여 함수를 작성한다. 
+        */
+        function nightDayHandler(self) {
+            var target = document.querySelector('body');
+            var links = document.querySelectorAll('a');
+            var i = 0;
+            if (self.value === 'night') {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'day'
+                while (i < links.length) {
+                    links[i].style.color = 'powderblue';
+                    i = i + 1;
+                }
+            } else {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'night'
+                while (i < links.length) {
+                    links[i].style.color = 'blue';
+                    i = i + 1;
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <input type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">
+    <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+    </ol>
+
+    <h2>JavaScript</h2>
+    <p>
+        JavaScript (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed,
+        prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one
+        of the three core technologies of World Wide Web content production. It is used to make webpages interactive and
+        provide online programs, including video games. The majority of websites employ it, and all modern web browsers
+        support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript
+        engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some
+        engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+    </p>
+</body>
+
+</html>
