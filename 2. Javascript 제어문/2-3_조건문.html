@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Conditional Statements</title>
+</head>
+
+<body>
+    <h1>Conditional Statements</h1>
+    <!--
+        < 조건문 >
+        - 하나의 프로그램이 조건에 따라서, 다른 순서의 기능들이 실행되도록 하는 문장.
+        - 조건문 if문의 괄호 안에는 Boolean data type (true or false)이 온다.
+        - if문 괄호 안의 값이 true라면, if문 바로 뒤 중괄호 내부의 코드를 실행하고, else 바로 뒤의 중괄호는 무시한다.
+        - 반대로 if문 괄호 안의 값이 false라면, if문 바로 뒤의 중괄호를 무시하고, else 바로 뒤의 중괄호 코드를 실행한다.
+            → if문 괄호 안의 Boolean 값에 따라 실행 코드가 달라진다. 따라서 상황에 따라 조건문에 들어오는 boolean 값이 달라지면, 실행되는 코드도 달라지므로, 상항에 따라 다르게 동작하는 코드가 만들어진다.
+    -->
+    <h2>Program</h2>
+    <script>
+        document.write("1<br>");
+        document.write("2<br>");
+        document.write("3<br>");
+        document.write("4<br>");
+    </script>
+
+    <h2>IF-true</h2>
+    <script>    // 출력 1 2 4
+        document.write("1<br>");
+        if (true) {
+            document.write("2<br>");
+        } else {
+            document.write("3<br>");
+        }
+        document.write("4<br>");
+    </script>
+
+    <h2>IF-false</h2>
+    <script>    // 출력 1 3 4
+        document.write("1<br>");
+        if (false) {
+            document.write("2<br>");
+        } else {
+            document.write("3<br>");
+        }
+        document.write("4<br>");
+    </script>
+
+</body>
+
+</html>
