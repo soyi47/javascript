@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>객체 예제</title>
+</head>
+
+<body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var coworkers = {
+            "programmer": "egoing",
+            "designer": "leezhe"
+        };
+        document.write("programmer : " + coworkers.programmer + "<br>");
+        document.write("designer : " + coworkers.designer + "<br>");
+
+        coworkers.bookkeeper = "duru";
+        document.write("bookkeeper : " + coworkers.bookkeeper + "<br>");
+        coworkers["data scientist"] = "taeho";
+        document.write("bookkeeper : " + coworkers["data scientist"] + "<br>");
+    </script>
+
+    <h2>Iterate</h2>
+    <script>
+        for (var key in coworkers) {
+            document.write(key + " : " + coworkers[key] + '<br>');
+        }
+    </script>
+
+    <h2>Property & Method</h2>
+    <script>
+        // 객체의 속성을 정의할 때, this는 객체 자기자신(여기서는 coworkers)을 가리킴.
+        coworkers.showAll = function () {
+            for (var key in this) {
+                document.write(key + " : " + this[key] + '<br>');
+            }
+        };
+        coworkers.showAll();
+    </script>
+</body>
+
+</html>
